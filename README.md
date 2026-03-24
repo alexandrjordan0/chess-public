@@ -1,43 +1,76 @@
-# Program šachy – SOČ projekt  
-Autor: **Alexandr Jordán**
+# Chess Mobile Application
 
-Studentská práce pro soutěž **Středoškolská odborná činnost (SOČ)**.  
-Tento veřejný repozitář obsahuje _aktuální_ zdrojový kód aplikace (bez kompletní historie).
+**Author:** Alexandr Jordán
+
+A native Android chess application optimized for offline play. Built with Kotlin and Jetpack Compose, it features a clean UI, full chess rules implementation, and a dual-engine AI system.
 
 ---
 
-## Klonování repozitáře
+## Key Features
+
+* **Game Modes:**
+
+  * Offline 1v1 on a single device (with custom piece rotation for face-to-face play)
+  * Single-player against bots
+
+* **Dual AI System:**
+
+  * Level 1: Custom heuristic evaluation bot
+  * Levels 2+: Integration of the advanced **Karballo Chess Engine** via UCI protocol
+
+* **Full Mechanics:**
+
+  * En Passant
+  * Castling
+  * Pawn Promotion
+  * Strict rule enforcement:
+
+    * Checkmate
+    * Stalemate
+    * Threefold repetition
+    * Insufficient material
+
+* **Game Management:**
+
+  * Configurable time controls
+  * Move history tracking
+  * PGN export
+
+* **UI/UX:**
+
+  * Fully responsive Jetpack Compose UI
+  * Dark/Light themes
+  * English/Czech localization
+
+---
+
+## Tech Stack
+
+* **Language:** Kotlin
+* **UI:** Jetpack Compose
+* **Architecture & Tools:** MVVM, Coroutines, SharedPreferences
+
+---
+
+## Getting Started
+
+Clone the repository:
+
 ```bash
 git clone https://github.com/alexandrjordan/ChessPublic.git
 cd ChessPublic
 ```
-## Požadavky
-Android Studio – doporučeno vydání Flamingo (2022.2.1) nebo novější
-Start → File ▸ Open → vyberte kořenovou složku projektu.
 
-Bez diakritiky v cestě k projektu – kvůli Gradle a Android SDK.
+Open the root directory in **Android Studio** (Flamingo 2022.2.1 or newer).
 
-## Stažení a spuštění aplikace
-Aktualní verzi aplikaci naleznete na Google Play:
+> Avoid diacritics in the project path to prevent Gradle and Android SDK build issues.
 
-<https://play.google.com/store/apps/details?id=com.jordan.chess>
-
-a nebo na tomto QR kódu:
-
-<a href="https://play.google.com/store/apps/details?id=com.jordan.chess">
-  <img src="docs/qr-google-play.png" alt="QR kód – Google Play" width="300">
-</a>
-
-
-
-
-## Řešení problémů
-Unable to delete directory při buildu:	Smazat složku Chess/app/build a projekt znovu sestavit.
+---
 
 ## Karballo Chess Engine
-Tento projekt využívá Karballo Chess Engine od Alberto Alonso Ruibal, který je licencován pod MIT licencí.
 
-Licenční ujednání (MIT License):
+This project utilizes the **Karballo Chess Engine** by Alberto Alonso Ruibal, licensed under the MIT License.
+
 ```
 Copyright (c) 2017 Alberto Alonso Ruibal
 
