@@ -4,6 +4,8 @@
 
 A native Android chess application optimized for offline play. Built with Kotlin and Jetpack Compose, it features a clean UI, full chess rules implementation, and a dual-engine AI system.
 
+> Achievement: 2nd place in the Olomouc Region SOČ competition, IT category
+
 ---
 
 ## Key Features
